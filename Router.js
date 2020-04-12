@@ -23,7 +23,8 @@ const isAuthenticated = function(req,res,next){
        return next();
     }else{
        return res.status(401).json({
-         error: 'User not authenticated'
+         error: true,
+         message: 'User not authenticated'
        })
     }
 }

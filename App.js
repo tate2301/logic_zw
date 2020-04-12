@@ -23,6 +23,9 @@ mongoose.connect("mongodb+srv://logic:JSqgo7BV3Sgli8ZQ@cluster0-vtqet.mongodb.ne
 })
 
 //Middleware
+app.use(require('prerender-node'))
+
+
 app.use(cors({
     origin: ['http://localhost:3000'],
     credentials: true
