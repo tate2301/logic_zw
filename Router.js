@@ -83,6 +83,5 @@ const CHALLENGE_SUBMIT = (req, res) => {
     res.end(submission)
 }
 
-//Router.post('/api/logic/challenges/:_id/submissions/', isAuthenticated, upload.single('submission'), CHALLENGE_SUBMIT)
 
 module.exports = Router
