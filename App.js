@@ -11,6 +11,7 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 const session = require('express-session')
 const path = require('path')
+const MongoStore = require('connect-mongo')(session);
 
 //Database 
 mongoose.connect("mongodb+srv://logic:JSqgo7BV3Sgli8ZQ@cluster0-vtqet.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true}, (err)=> {
@@ -22,12 +23,18 @@ mongoose.connect("mongodb+srv://logic:JSqgo7BV3Sgli8ZQ@cluster0-vtqet.mongodb.ne
 })
 
 //Middleware
+app.use(cors({
+    origin: ['http://localhost:3000'],
+    credentials: true
+}))
 app.use(session({
     secret: process.env.SECRET,
     saveUninitialized: false,
     resave: false,
-    cookie: { maxAge : new Date(Date.now() + 3600000 * 72) }
+    cookie: { maxAge : new Date(Date.now() + 3600000 * 72) },
+    store: new MongoStore({ mongooseConnection: mongoose.connection })
 }))
+
 app.use(passport.initialize())
 app.use(passport.session())
 
