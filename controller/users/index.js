@@ -43,7 +43,7 @@ router.post('/signup', (req, res) => {
 
 
 router.post('/login', (req, res) => {
-
+  console.log(req.body)
   if(!req.body.username){ 
     res.json({success: false, message: "Username was not given"}) 
   } else { 

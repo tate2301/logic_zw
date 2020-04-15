@@ -13,7 +13,14 @@ const challengeSchema = mongoose.Schema({
         type: Boolean,
         default: false
     },
-    deadline: String,
+    deadline: {
+        type: String,
+        required: true
+    },
+    dateStarted: {
+        type: String,
+        required: true
+    },
     created: String,
     description: {},
     started: {

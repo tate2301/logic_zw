@@ -1,0 +1,15 @@
+/*!
+ * FilePond 4.13.1
+ * Licensed under MIT, https://opensource.org/licenses/MIT/
+ * Please visit https://pqina.nl/filepond/ for details.
+ */
+
+/*!
+ * react-filepond v7.0.1
+ * A handy FilePond adapter component for React
+ * 
+ * Copyright (c) 2019 PQINA
+ * https://pqina.nl/filepond
+ * 
+ * Licensed under the MIT license.
+ */
