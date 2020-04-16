@@ -14,7 +14,8 @@ const path = require('path')
 const MongoStore = require('connect-mongo')(session);
 
 //Database 
-mongoose.connect("mongodb+srv://logic:JSqgo7BV3Sgli8ZQ@cluster0-vtqet.mongodb.net/test?retryWrites=true&w=majority"/*"mongodb://localhost/logic_db"*/,
+mongoose.connect("mongodb+srv://logic:JSqgo7BV3Sgli8ZQ@cluster0-vtqet.mongodb.net/test?retryWrites=true&w=majority",
+//"mongodb://localhost/logic_db",
  {useNewUrlParser: true, useUnifiedTopology: true}, (err)=> {
     if(err) {
         console.log(err)
