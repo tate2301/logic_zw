@@ -3,7 +3,7 @@ import React from 'react'
 const CardCategory = ({category}) => {
 
     return (
-        <div className="max-w-sm sm:w-full inline-block rounded overflow-hidden shadow-lg mr-6 mt-4">
+        <div className="max-w-sm sm:w-full inline-block rounded overflow-hidden shadow-sm mr-4 mt-4 border-2 border-gray-200">
            <a href={`/challenges?cat=${category.categoryClass}`}>
                 <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2">{category.categoryName}</div>

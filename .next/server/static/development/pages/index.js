@@ -88,15 +88,15 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./pages/index.js":
-/*!************************!*\
-  !*** ./pages/index.js ***!
-  \************************/
+/***/ "./pages/index.jsx":
+/*!*************************!*\
+  !*** ./pages/index.jsx ***!
+  \*************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -137,7 +137,7 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_9__["Helmet"], null, __jsx("title", null, "Logic Challenges: GET RESEARCH DONE")), __jsx("header", null, __jsx(_views_navbars_navbar_logged_out__WEBPACK_IMPORTED_MODULE_1__["default"], null), __jsx(_views_banners_hero_landing_page__WEBPACK_IMPORTED_MODULE_6__["default"], null)), __jsx("section", null, __jsx(_views_cards_card_services__WEBPACK_IMPORTED_MODULE_4__["default"], null)), __jsx("section", null, __jsx(_views_sections_browse_categories__WEBPACK_IMPORTED_MODULE_7__["default"], null)), __jsx("section", null, __jsx(_views_sections_browse_challenges_landing_row__WEBPACK_IMPORTED_MODULE_8__["default"], null)), __jsx("section", null, __jsx(_views_cards_get_started_hosting_small__WEBPACK_IMPORTED_MODULE_3__["default"], null)), __jsx("section", null, __jsx(_views_footers_pages_main_footer__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_9__["Helmet"], null, __jsx("title", null, "Logic Challenges: GET RESEARCH DONE")), __jsx("header", null, __jsx(_views_navbars_navbar_logged_out__WEBPACK_IMPORTED_MODULE_1__["default"], null), __jsx(_views_banners_hero_landing_page__WEBPACK_IMPORTED_MODULE_6__["default"], null)), __jsx("section", null, __jsx(_views_sections_browse_categories__WEBPACK_IMPORTED_MODULE_7__["default"], null)), __jsx("section", null, __jsx(_views_sections_browse_challenges_landing_row__WEBPACK_IMPORTED_MODULE_8__["default"], null)), __jsx("section", null, __jsx(_views_cards_card_services__WEBPACK_IMPORTED_MODULE_4__["default"], null)), __jsx("section", null, __jsx(_views_cards_get_started_hosting_small__WEBPACK_IMPORTED_MODULE_3__["default"], null)), __jsx("section", null, __jsx(_views_footers_pages_main_footer__WEBPACK_IMPORTED_MODULE_5__["default"], {
       year: "2020",
       tagline: "The smart way to get answers to your questions",
       companyName: "Logic Private Limited"
@@ -172,12 +172,15 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _chakra_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @chakra-ui/core */ "@chakra-ui/core");
+/* harmony import */ var _chakra_ui_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_chakra_ui_core__WEBPACK_IMPORTED_MODULE_1__);
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 const HeroLandingPage = props => {
   return __jsx("section", {
-    className: "hero"
+    className: "hero bg-purple-700 relative"
   }, __jsx("div", {
     className: "hero-body"
   }, __jsx("div", {
@@ -189,12 +192,10 @@ const HeroLandingPage = props => {
   }, __jsx("div", {
     className: "container mx-auto py-32"
   }, __jsx("h1", {
-    className: "title"
+    className: "text-5xl font-bold text-white"
   }, "You are your best Researcher"), __jsx("h2", {
-    className: "subtitle"
-  }, "The solutions to the world's most pressing problems lies not within coporations but amongst the regular researcher."))), __jsx("div", {
-    className: "column is-half is-0-mobile"
-  })))), __jsx("hr", null));
+    className: "text-lg text-white"
+  }, "The solutions to the world's most pressing problems lies not within coporations but amongst the regular researcher.")))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (HeroLandingPage);
@@ -219,7 +220,7 @@ const CardCategory = ({
   category
 }) => {
   return __jsx("div", {
-    className: "max-w-sm sm:w-full inline-block rounded overflow-hidden shadow-lg mr-6 mt-4"
+    className: "max-w-sm sm:w-full inline-block rounded overflow-hidden shadow-sm mr-4 mt-4 border-2 border-gray-200"
   }, __jsx("a", {
     href: `/challenges?cat=${category.categoryClass}`
   }, __jsx("div", {
@@ -236,6 +237,66 @@ const CardCategory = ({
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (CardCategory);
+
+/***/ }),
+
+/***/ "./views/cards/card_challenge_small.jsx":
+/*!**********************************************!*\
+  !*** ./views/cards/card_challenge_small.jsx ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _chakra_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @chakra-ui/core */ "@chakra-ui/core");
+/* harmony import */ var _chakra_ui_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_chakra_ui_core__WEBPACK_IMPORTED_MODULE_1__);
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const CardChallengeSmall = ({
+  challenge
+}) => {
+  return __jsx("div", {
+    className: "md:inline-block md:mr-4 sm:w-full mb-4 md:w-1/3 lg:w-1/4 h-auto border-2 border-gray-200 rounded p-4 shadow-sm"
+  }, __jsx("div", {
+    className: "flex w-full h-12 mb-2"
+  }, __jsx("div", {
+    className: "w-1/5 h-full"
+  }), __jsx("div", {
+    className: "w-4/5"
+  }, __jsx("div", {
+    className: "text-md font-bold text-gray-800"
+  }, __jsx("p", null, challenge.challengeName || "The curing of the Marketer")), __jsx("a", {
+    href: `app/sponsor/${challenge.challengeSponsor.profile}`
+  }, __jsx("div", {
+    className: "text-md text-purple-700"
+  }, challenge.challengeSponsor.name)))), __jsx("div", {
+    className: "flex"
+  }, __jsx("p", null, "Difficulty: ", __jsx("span", {
+    className: "text-gray-800 font-medium"
+  }, challenge.challengeDifficulty), __jsx("br", null), "Category: ", __jsx("span", {
+    className: "text-gray-800 font-medium"
+  }, challenge.challengeCategory), __jsx("br", null), "Evalution: ", __jsx("span", {
+    className: "text-gray-800 font-medium"
+  }, challenge.challengeEvalutionMetric), __jsx("br", null))), __jsx("div", {
+    className: "block"
+  }, __jsx("div", {
+    className: "flex justify-between"
+  }, __jsx("span", null, "Posted 6 days ago"), __jsx("span", null, "Ends in 2 days"))), __jsx("div", {
+    className: "flex justify-between"
+  }, __jsx("span", {
+    className: "text-3xl font-bold text-gray-800"
+  }, "$", challenge.challengePrizeMoney), __jsx(_chakra_ui_core__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+    variant: "outline",
+    variantColor: "purple"
+  }, "Join")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (CardChallengeSmall);
 
 /***/ }),
 
@@ -261,7 +322,7 @@ const CardServices = props => {
   }, __jsx("div", {
     className: "lg:text-center"
   }, __jsx("p", {
-    className: "text-base leading-6 text-green-600 font-semibold tracking-wide uppercase"
+    className: "text-base leading-6 text-purple-600 font-semibold tracking-wide uppercase"
   }, "GET RESEARCH DONE"), __jsx("h3", {
     className: "mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
   }, "Corporations are looking for researchers like you"), __jsx("p", {
@@ -275,7 +336,7 @@ const CardServices = props => {
   }, __jsx("div", {
     className: "flex-shrink-0"
   }, __jsx("div", {
-    className: "flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white"
+    className: "flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white"
   }, __jsx("svg", {
     className: "h-6 w-6",
     stroke: "currentColor",
@@ -299,7 +360,7 @@ const CardServices = props => {
   }, __jsx("div", {
     className: "flex-shrink-0"
   }, __jsx("div", {
-    className: "flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white"
+    className: "flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white"
   }, __jsx("svg", {
     className: "h-6 w-6",
     stroke: "currentColor",
@@ -323,7 +384,7 @@ const CardServices = props => {
   }, __jsx("div", {
     className: "flex-shrink-0"
   }, __jsx("div", {
-    className: "flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white"
+    className: "flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white"
   }, __jsx("svg", {
     className: "h-6 w-6",
     stroke: "currentColor",
@@ -347,7 +408,7 @@ const CardServices = props => {
   }, __jsx("div", {
     className: "flex-shrink-0"
   }, __jsx("div", {
-    className: "flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white"
+    className: "flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white"
   }, __jsx("svg", {
     className: "h-6 w-6",
     stroke: "currentColor",
@@ -387,7 +448,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 const CardGetStartedHosting = props => {
   return __jsx("div", {
-    className: "bg-green-700"
+    className: "bg-purple-700"
   }, __jsx("div", {
     className: "max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between"
   }, __jsx("h2", {
@@ -400,12 +461,12 @@ const CardGetStartedHosting = props => {
     className: "inline-flex rounded-md shadow"
   }, __jsx("a", {
     href: "#",
-    className: "inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-green-600 hover:bg-green-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+    className: "inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-purple-600 hover:bg-purple-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
   }, "Get started")), __jsx("div", {
     className: "ml-3 inline-flex rounded-md shadow"
   }, __jsx("a", {
     href: "#",
-    className: "inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-green-600 bg-white hover:text-green-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+    className: "inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-purple-600 bg-white hover:text-purple-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
   }, "Learn more")))));
 };
 
@@ -492,7 +553,7 @@ const NavbarLoggedOut = ({
   user
 }) => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("nav", {
-    className: "navbar",
+    className: "navbar fixed w-screen top-0 border-b-2 border-gray-200",
     role: "navigation",
     "aria-label": "main navigation"
   }, __jsx("div", {
@@ -502,7 +563,7 @@ const NavbarLoggedOut = ({
     href: "/"
   }, __jsx("span", {
     className: "title is-3 text-green-600"
-  }, "logic")), __jsx("a", {
+  })), __jsx("a", {
     className: "navbar-burger burger",
     "data-target": "Options"
   }, __jsx("span", {
@@ -543,10 +604,10 @@ const NavbarLoggedOut = ({
   }, __jsx("div", {
     className: "buttons"
   }, __jsx("a", {
-    href: "http://localhost:3000/register",
-    className: "btn hover:text-white mr-4 text-white rounded px-4 py-2 bg-green-700"
+    href: "auth/register",
+    className: "btn hover:text-white mr-4 text-white text-medium rounded px-4 py-2 bg-purple-700"
   }, __jsx("strong", null, "Get started now")), __jsx("a", {
-    href: "http://localhost:3000/login",
+    href: "auth/login",
     className: "btn text-gray-700 rounded px-4 py-2 bg-white"
   }, __jsx("strong", null, "Login"))))))));
 };
@@ -616,16 +677,56 @@ class BrowseCategories extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _cards_card_challenge_small__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../cards/card_challenge_small */ "./views/cards/card_challenge_small.jsx");
+/* harmony import */ var _chakra_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @chakra-ui/core */ "@chakra-ui/core");
+/* harmony import */ var _chakra_ui_core__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_chakra_ui_core__WEBPACK_IMPORTED_MODULE_2__);
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
 
 
 class BrowseChallengesLandingRow extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(...args) {
+    super(...args);
+
+    _defineProperty(this, "state", {
+      challenges: [{
+        categoryName: "The curing of the Marketer",
+        challengeSponsor: {
+          name: "Team Tachr",
+          profile: "teamtachr"
+        },
+        challengePrizeMoney: 650.00,
+        challengeEvaluationMetric: "Creativity",
+        challengeDifficulty: "Professional"
+      }, {
+        categoryName: "The curing of the Marketer",
+        challengeSponsor: {
+          name: "Team Tachr",
+          profile: "teamtachr"
+        },
+        challengePrizeMoney: 650.00,
+        challengeEvaluationMetric: "Creativity",
+        challengeDifficulty: "Professional"
+      }]
+    });
+  }
+
   render() {
-    return __jsx("div", {
+    return __jsx(_chakra_ui_core__WEBPACK_IMPORTED_MODULE_2__["ThemeProvider"], {
+      theme: _chakra_ui_core__WEBPACK_IMPORTED_MODULE_2__["theme"]
+    }, __jsx(_chakra_ui_core__WEBPACK_IMPORTED_MODULE_2__["ColorModeProvider"], null, __jsx(_chakra_ui_core__WEBPACK_IMPORTED_MODULE_2__["LightMode"], null, __jsx("div", {
       className: "container mx-auto px-4 py-12"
     }, __jsx("h3", {
       className: "text-2xl text-gray-700"
-    }, "Explore challenges"));
+    }, "Explore challenges"), __jsx("div", {
+      className: "block w-full overflow-x-scroll py-4"
+    }, this.state.challenges.map(challenge => __jsx(_cards_card_challenge_small__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      challenge: challenge
+    })))))));
   }
 
 }
@@ -634,15 +735,26 @@ class BrowseChallengesLandingRow extends react__WEBPACK_IMPORTED_MODULE_0__["Com
 
 /***/ }),
 
-/***/ 4:
-/*!******************************!*\
-  !*** multi ./pages/index.js ***!
-  \******************************/
+/***/ 3:
+/*!*******************************!*\
+  !*** multi ./pages/index.jsx ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! E:\workspace\logic\server\pages\index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! E:\workspace\logic\server\pages\index.jsx */"./pages/index.jsx");
 
+
+/***/ }),
+
+/***/ "@chakra-ui/core":
+/*!**********************************!*\
+  !*** external "@chakra-ui/core" ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@chakra-ui/core");
 
 /***/ }),
 

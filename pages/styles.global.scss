@@ -1,15 +1,116 @@
 @import url('~bulma/bulma.sass');
 @import url('./style.css');
-@import url('./assets/vendor/@fortawesome/fontawesome-free/scss/fontawesome.scss');
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Righteous:wght@400&display=swap');
+@import url('../static/assets/vendor/@fortawesome/fontawesome-free/scss/fontawesome.scss');
+@import url('/static/assets/fonts/circular-std/dist/index.css');
 
 body {
-    font-family: "Karla", sans-serif !important;
+    font-family: "CircularStd", sans-serif !important;
+    font-size: 0.9rem;
+    padding-top: 45px;
 }
 
-.navbar-brand {
-    font-family: "Righteous", sans-serif !important;
-    font-size: 32px !important;
-    letter-spacing: 0.1em;
+
+.checkbox-label {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 24px;
+    height: 24px;
+    width: 24px;
+    clear: both;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    
+    .checkbox-custom{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        background-color: transparent;
+        border-radius: 4px;
+        border: 2px solid #121212;
+    }
+
+    .checkbox-custom::after{
+        position: absolute;
+        content:"";
+        left: 12px;
+        top:12px;
+        height: 0;
+        width: 0;
+        border-radius: 4px;
+        border:solid #fff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(0deg) scale(0);
+        -webkit-transform: rotate(0deg) scale(0);
+        -ms-transform: rotate(0deg) scale(0);
+        opacity: 1;
+    }
+
+    input:checked ~ .checkbox-custom{
+        background-color: #112211;
+        border-radius: 4px;
+        transform: rotate(0deg) scale(1);
+        -webkit-transform: rotate(0deg) scale(1);
+        -ms-transform: rotate(0deg) scale(1);
+        opacity: 1;
+        border:1px solid #121212;
+    }
+
+    input:checked ~ .checkbox-custom::after{
+        transform: rotate(45deg) scale(1);
+        -webkit-transform: rotate(45deg) scale(1);
+        -ms-transform: rotate(45deg) scale(1);
+        opacity: 1;
+        left: 8px;
+        top: 3px;
+        width: 6px;
+        height: 12px;
+        border: 2px;
+        border-width: 0 2px 2px 0;
+        background-color: transparent;
+        border-radius: 0;
+    }
+
+     .checkbox-custom::before {
+        position: absolute;
+        content: "";
+        left: 10px;
+        top: 10px;
+        width: 0px;
+        height: 0px;
+        border-radius: 5px;
+        border: 2px solid #121212;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);    
+    }
+    
+    input:checked ~ .checkbox-custom::before {
+        left: -3px;
+        top: -3px;
+        width: 24px;
+        height: 24px;
+        border-radius: 5px;
+        -webkit-transform: scale(3);
+        -ms-transform: scale(3);
+        transform: scale(3);
+        opacity:0;
+        z-index: 999;
+        transition: all 0.3s ease-out;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+    }
+    
+    
+    
 }

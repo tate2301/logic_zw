@@ -4,10 +4,10 @@ const NavbarLoggedOut = ({user}) => {
 
     return(
         <>
-            <nav className="navbar" role="navigation" aria-label="main navigation">
+            <nav className="navbar fixed w-screen top-0 border-b-2 border-gray-200" role="navigation" aria-label="main navigation">
                     <div className="navbar-brand">
                       <a className="navbar-item" href="/">
-                        <span className="title is-3 text-green-600">logic</span>
+                        <span className="title is-3 text-green-600"></span>
                       </a>
                   
                       <a className="navbar-burger burger" data-target="Options">
@@ -54,10 +54,10 @@ const NavbarLoggedOut = ({user}) => {
                       <div className="navbar-end">
                         <div className="navbar-item">
                           <div className="buttons">
-                            <a href="http://localhost:3000/register" className="btn hover:text-white mr-4 text-white rounded px-4 py-2 bg-green-700">
+                            <a href="auth/register" className="btn hover:text-white mr-4 text-white text-medium rounded px-4 py-2 bg-purple-700">
                               <strong>Get started now</strong>
                             </a>
-                            <a href="http://localhost:3000/login" className="btn text-gray-700 rounded px-4 py-2 bg-white">
+                            <a href="auth/login" className="btn text-gray-700 rounded px-4 py-2 bg-white">
                               <strong>Login</strong>
                             </a>
                           </div>

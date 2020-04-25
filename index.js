@@ -17,7 +17,7 @@ const pathMatch = require('path-match')
 const nextApp = next({dev})
 const handle = nextApp.getRequestHandler()
 const {parse} = require('url')
-
+ 
 nextApp.prepare()
     .then(() => {
         const app = require('express')()
@@ -62,6 +62,7 @@ nextApp.prepare()
         app.get('/app/*', function (req, res) { res.sendFile(path.join(__dirname, 'build', 'index.html'));});
 
         app.use(express.static(path.join(__dirname, 'uploads/')));
+        app.use('p/', express.static(path.join(__dirname, 'public/')));
 
         const route = pathMatch();
 
